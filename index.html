@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartCart Customer Segmentation</title>
+</head>
+<body>
+    <h2>SmartCart Customer Cluster Prediction</h2>
+    <form action="/predict" method="POST">
+        <label>Income:</label><br>
+        <input type="text" name="Income" required><br><br>
+
+        <label>Recency:</label><br>
+        <input type="text" name="Recency" required><br><br>
+
+        <label>Total Spending:</label><br>
+        <input type="text" name="total_spending" required><br><br>
+
+        <button type="submit">Predict Cluster</button>
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
